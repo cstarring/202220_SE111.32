@@ -5,71 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Chris Starring">
-    <meta name="description" content="w5 movie">
-    <title>W5 Movie</title>
+    <meta name="description" content="w4 movie">
+    <title>W4 Movie</title>
 </head>
 <body>
     
-    <!--wrapper or container div for all content-->
-    <div id="container" style="border:1px solid blue;">
+    <div id="container"><!--start container-->
 
         <hr>
+        <!--start header-->
+        <div id="header">
 
-        <div id="header" style="border:1px solid black; margin:10px;">
+            <h1><em>Cars</em></h1>
 
-            <h1>Cars</h1>
-
-        </div><!--/ header-->
-
-
-        <div id="nav" style="border:1px solid black; margin:10px;">
-
+        </div><!--end header-->
+        <hr>
+        <!--start nav-->
+        <div id="nav"></div>
             <a href="index.html">ABOUT</a>
             <a href="cast.html">CAST</a>
             <a href="review.html">REVIEW</a>
-
-        </div><!--/ nav-->
+        </div><!--end nav-->
 
         <hr>
 
-        <div id="content" style="border:1px solid black; margin:10px;">
+        <div id="content"><!--start content-->
 
-            <h2>CAST of the movie Cars</h2>
-
+            <h2>CAST</h2>
+            <hr>
             <div class="character">
-
-                <h4>Lightning McQueen</h4>
-
-                <img src="images/owen.jpg" alt="Owen Wilson headshot" style="width:50px;">
-
+                <h3>Lightning McQueen</h3>
+                <img src="images/owen.jpg" style="width:50px" alt="Owen Wilson">
                 <p>Owen Wilson</p>
+            </div>
+            <hr>
+            <div class="character">
+                <h3>Doc Hudson</h3>
+                <img src="images/newman.jpg" style="width:50px" alt="Paul Newman">
+                <p>Paul Newman</p>
+            </div>
+            <hr>
+            <div class="character">
+                <h3>Sally Carrera</h3>
+                <img src="images/bonnie.jpg" style="width:50px" alt="Bonnie Hunt">
+                <p>Bonnie Hunt</p>
+            </div>
+            <hr>
+            <div class="character">
+                <h3>Tow Mater</h3>
+                <img src="images/larry.jpg" style="width:50px" alt="Larry the Cable Guy">
+                <p>Larry the Cable Guy</p>
+            </div>
+            <hr>
+            <div class="character">
+                <h3>Sheriff</h3>
+                <img src="images/mike.jpg" style="width:50px" alt="Michael Wallis">
+                <p>Michael Wallis</p>
+            </div>
 
-                <hr>
-
-                <h4>Gina</h4>
-
-                <img src="images/renee.jpg" alt="Renee Zellwegger headshot" style="width:50px;">
-
-                <p>Renee Zellwegger</p>
-
-
-            </div><!--/ character-->
-
-        </div><!--/ content-->
+        </div><!--end content-->
 
         <hr>
 
-        <div id="footer" style="border:1px solid black; margin:10px;">
-        
+        <div id="footer">
             <a href="#header">Back to Top</a>
-        
-            <!--image element with w3c validation screenshot for THIS page-->
+            
+            <br>
+            
+            <img src="images/check2.png" alt="checked code">
+            <!--w3c validation here-->
+            <p>written in the screenshot as well, but checking the code on w3c resulted in an error saying I had an end stray tag despite not actually having one; it detected the end tag for my container as a stray end tag, so I'm not sure about that one.</p>
 
         </div>
-
-
-
-    </div>
+    
+    
+    </div><!--end container-->
 
 </body>
 </html>
