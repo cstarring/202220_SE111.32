@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Starring">
+    <meta name="description" content="JS demo 2">
+    <title>W6 | JS Demo #2</title>
+</head>
+<body>
+    
+    <!--we SHOULD have some sort of html in the document itself-->
+    <h1>W6 | JS Second Demo</h1>>
+
+    <!--IN=DOCUMENT JAVASCRIPT-->
+    <script>
+
+        var preference = prompt(`Welcome to Good Burger, home of the Good Burger. Will this order be to go?\nType 'yes' or 'no':`)
+        console.log(preference)
+
+        //FUNCTIONS must be defined before they are called
+        //function definition below
+        function checkDining(_preference)
+        {
+            console.log(`checkDining() has been reached`)
+
+            if(_preference.toLowerCase() === `yes`)//checks value AND type
+            {
+                console.log(`take-out`)
+                return `TAKE_OUT`
+            }
+            else
+            {
+                console.log(`dine-in`)
+                return `DINE-IN`
+            }
+
+        }//checkDining()
+
+        //functions must be defined before they are called
+        var dining = checkDining(preference)
+        console.log(dining)
+
+        var order = prompt(`Thank you for your choice of ${dining}! I'll be taking your order now. Please type the number of the item you wish to purchase. \n1. HAMBURGER\2. FRENCH FRIES\N3. MILKSHAKE`)
+
+        console.log(order)
+
+        //show how prompt() returns strings!
+        if (order === 3)
+        {
+            console.log(`value AND type are equal`)
+        }
+        else if(order === 3)
+        {
+            console.log(`only values are equal`)
+        }
+        else
+        {
+            console.log(`values not equal`)
+        }
+
+        function foodOrDrink(_order)
+        {
+            if(_order < 3)
+            {
+                return `you want some FOOD!`
+            }
+            else if(_order === 3)
+            {
+                return `Shake full of milk`
+            }
+            else
+            {
+                return `aint a valid choice G`
+            }
+        }//foodOrDrink() CLOSE
+
+        //show confirmation msg to the user
+        alert(`${foodOrDrink(Number(order))}`)  
+
+        function calcPriceWithTax(_price, _tax)
+        {
+            /*var newPrice = _price + (_price * (_tax/100))
+            return newPrice*/ 
+            return newPrice = _price + (_price * (_tax/100))
+            //both are valid methods to return this ^
+
+        }//calcPriceWithTax() CLOSE
+
+        function getItem(_order)
+        {
+            if(_order === `1`)
+            {
+                return `Hamburger`
+            }
+            else if(_order === `2`)
+            {
+                return `French Fries`
+            }
+            else if(_order === `3`)
+            {
+                return `Milkshake`
+            }
+            else
+            {
+                return `Nothing`
+            }
+
+        }//getItem CLOSE
+
+        var item = getItem(order)
+        console.log(item)
+
+        function getTotal(_item, _tax)
+        {
+            //SWITCHES IN JAVASCRIPT
+            switch(_item)
+            {
+                case `Hamburger`:
+                    return calcPriceWithTax(3.00, _tax)
+                    break
+
+                case `French Fries`:
+                    return calcPriceWithTax(1.00, _tax)
+                    break
+
+                case `Milkshake`:
+                    return calcPriceWithTax(5.00, _tax)
+                    break
+                
+                case `Nothing`:
+                    return calcPriceWithTax(0.00, _tax)
+                    break
+                
+            }
+        
+        }//getTotal() CLOSE
+
+        var total = getTotal(item, 20).toFixed(2)
+        console.log(`The total price for a ${item} with tax is $${total}`)
+
+        alert(`The total price for a $${item} with tax is $${total}`)
+        
+    </script>
+</body>
+</html>

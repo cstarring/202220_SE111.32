@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Starring">
+    <meta name="description" content="w6 demo">
+
+    <title>Week 6 | JS Intro</title>
+</head>
+<body>
+    
+    <!--we SHOULD have some sort of HTML in the file-->
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+    <!--IN-DOCUMENT JAVASCRIPT-->
+    <!--in-document: lives within the HTML file (or current resource)-->
+    <script>
+        //everything inside of <script> tags MUST be written in JAVASCRIPT! (single line commenting)
+        
+        /*I want to split some comments onto multiple lines
+        I can do this (block commenting)*/
+
+        //creating a variable --> keyword "var"
+        var num1 //declaration only
+        num1 = 7 //once declared, value can be assigned
+
+        //combine declaration and assignment (definition) onto one line
+        var num2 = 10
+        var num3 = 7
+
+        //the vars num1, num2, and num3 cannot be used (either in processing, display, conditions) until they have been assigned value
+        var sum = num2 + num3
+
+        //DISPLAY DATA DO THE BROWSER -- user can see the information 
+        //alert() creates a pop-up in the browser page to display data
+        //alert() --> print() / OUTPUT
+        // ` ` denote a literal string --> combines formatting from .format() in Python --> hold var names inside of ${VAR}
+        alert(`The sum is: \n\n${sum}`)
+        //escape sequences work in literal strings (\n is a new line in popup window)
+        
+
+        //display to the console
+        //for js, the console is built into the dev tools
+
+        /*ACCESSING THE DEV TOOLS
+            -f12 or right click > inspect
+            -choose CONSOLE in upper right menu panel
+            -refresh the page
+        */
+        console.log(`The sum is: ${sum}`)
+        //console.log() is primarily used for TESTING
+        //no physical display in page, only in the dev tools
+
+        //"INPUT" gaining data from browser popup where user enters information (not from a form)
+        //prompt user for value; script waits for the enter key/ok button to be initiatd before moving on
+
+        prompt(`Enter your name: `) //input() in python (same effect, waits for ok button to be pressed)
+        console.log(`we have passed the prompt()`)
+        //most often we're using prompt() to GAIN DATA to USE
+        //store data from the prompt()
+        var name = prompt(`Enter your first name: `)
+
+        console.log(name)
+
+        alert(`Hello there ${name}!\nClick OK to continue.`)
+
+        //all data from prompt() is a STRING
+        //concatenation (adding strings)
+        var lastname = prompt(`Enter your last name: `)
+
+        var full = name + " " + lastname
+
+        console.log(full)
+
+        var num = prompt(`Enter a numer to be multiplied by 7: `)
+
+        var multi = num * 7
+        console.log(multi) //still shows numeric value
+
+        //for reference: Number()
+        //num = Number(num) ==> ensures num is trukly a number
+
+        
+        
+        console.log(`the multi value is: ${multi}`)//in console [inspect]
+        alert(`${num} * 7 = ${multi}`)//in browser popup
+        
+
+        
+        
+    </script>
+
+
+</body>
+</html>
