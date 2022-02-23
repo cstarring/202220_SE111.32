@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Starring">
+    <meta name="description" content="w6 javascript calculator">
+    <title>W6 | Javascript Pay Calculator</title>
+</head>
+<body>
+    
+    <script>
+
+        //establishing variables + prompts for obtaining info
+
+        var hoursWorked = Number(prompt(` How many hours have you worked? `))
+        var hourlyPay = Number(prompt(` What is your hourly pay? `))
+        var grossPay = hoursWorked * hourlyPay
+        var taxRate = grossPay * 0.2
+        var netPay = grossPay - taxRate
+
+        //logging everything to console
+
+        console.log(`GROSS PAY: $${grossPay.toFixed(2)}`)
+        console.log(`UNCLE SAM'S SHARE: $${taxRate.toFixed(2)}`)
+        console.log(`NET PAY: $${netPay.toFixed(2)}`)
+
+        //final output alert
+
+        alert(`GROSS PAY: $${grossPay.toFixed(2)}\nUNCLE SAM'S SHARE: $${taxRate.toFixed(2)}\nNET PAY: $${netPay.toFixed(2)}`)
+    </script>
+</body>
+</html>
